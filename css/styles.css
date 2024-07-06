@@ -98,18 +98,20 @@ header.sticky {
   right: 15px;
   top: 10px;
   color: #3498db;
-  font-size: 1.5em;
+  font-size: 2.5em;
   z-index: 20;
   padding: 0 7px;
   border-radius: 4px;
   background: #fff;
+  width: 100%;
+
 }
 #mobile-menu-close {
   display: none;
   text-align: right;
   width: 100%;
   background: #fff;
-  font-size: 1.5em;
+  font-size: 2.5em;
   padding-right: 15px;
   padding-top: 10px;
   cursor: pointer;
@@ -123,7 +125,7 @@ header.sticky {
   vertical-align: middle;
 }
 footer {
-  padding: 50px 0;
+  padding: 5px;
 }
 .copyright {
   padding-top: 20px;
@@ -435,49 +437,59 @@ footer {
   padding: 0 0 0 15px;
 }
 #projects {
-  padding: 50px 15px;
-  border-bottom: 1px solid #dcd9d9;
-  text-align: center;
-}
-#projects h2 {
-  color: #374054;
-  margin-bottom: 50px;
-}
-.project {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 4px;
-}
-.project-image {
-  float: left;
-}
-.project-info {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 300px;
-  padding: 15px;
-}
-.project-info h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
-  margin: 0 0 15px 0;
-}
-.project-info p {
-  color: #74808a;
-  margin: 0 0 15px 0;
-  font-size: 0.9em;
-}
-.no-image .project-info {
-  position: relative;
-  margin: 0;
-  padding: 30px 15px;
-  transform: none;
-}
+    padding: 50px 15px;
+    border-bottom: 1px solid #dcd9d9;
+    text-align: center;
+  }
+  #projects h2 {
+    color: #374054;
+    margin-bottom: 50px;
+  }
+  .project {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .project-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+    padding: 15px;
+  }
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px 4px 4px 4px;
+    border: 2px solid #000; /* Black border */
+  }
+  .project-info {
+    flex: 1;
+    padding: 15px;
+  }
+  .project-info h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #374054;
+    margin: 0 0 15px 0;
+  }
+  .project-info p {
+    color: #74808a;
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    text-align: justify;
+  }
+  .no-image .project-info {
+    position: relative;
+    margin: 0;
+    padding: 30px 15px;
+    transform: none;
+  }
+  
 #more-projects {
   display: none;
 }
